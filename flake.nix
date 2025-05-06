@@ -8,8 +8,10 @@
       overlay = (prev: final: {
         libconfig = final.libconfig.overrideAttrs (old: {
           version = "1.8";
-          src = final.fetchurl {
-            url = "https://github.com/hyperrealm/libconfig/archive/refs/tags/v1.8.tar.gz";
+          src = final.fetchFromGitHub {
+            owner = "hyperrealm";
+            repo = "libconfig";
+            rev = "v1.8";
             hash = "";
           };
         });
