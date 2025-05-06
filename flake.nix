@@ -12,7 +12,7 @@
             owner = "hyperrealm";
             repo = "libconfig";
             rev = "v1.8";
-            hash = "";
+            hash = "sha256-Qb1R3qNqZby5/e6ckfcDJ5aT8shAA4f9VUhGyEiDoc8=";
           };
         });
       });
