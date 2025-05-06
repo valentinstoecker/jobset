@@ -7,10 +7,7 @@
     let
       overlay = (prev: final: {
         libconfig = prev.libconfig.overrideAttrs (old: {
-          src = prev.fetchurl {
-            url = "https://hyperrealm.github.io/libconfig/dist/libconfig-1.8.tar.gz";
-            hash = "00000000000000000000000000000000000000000000000000000000";
-          };
+          version = "1.8";
         });
       });
       pkgs = nixpkgs.legacyPackages.x86_64-linux.extend overlay;
