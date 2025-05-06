@@ -5,7 +5,15 @@
   outputs =
     { self, nixpkgs, ... }:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      overlay = prev: final: {
+        libconfig = prev.libconfig.overrideAttrs {
+          src = prev.fetchurl {
+            url = "http://hyperrealm.github.io/libconfig/dist/libconfig-1.8.tar.gz";
+            hash = "";
+          };
+        };
+      };
+      pkgs = nixpkgs.legacyPackages.x86_64-linux.extend overlay;
     in
     {
       packages.x86_64-linux = {
