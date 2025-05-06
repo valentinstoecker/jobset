@@ -6,7 +6,7 @@
     { self, nixpkgs, ... }:
     let
       overlay = (prev: final: {
-        libconfig = prev.libconfig.overrideAttrs (old: {
+        libconfig = final.libconfig.overrideAttrs (old: {
           version = "1.8";
         });
       });
