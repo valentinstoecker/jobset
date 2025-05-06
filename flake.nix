@@ -6,12 +6,12 @@
     { self, nixpkgs, ... }:
     let
       overlay = prev: final: {
-        libconfig = prev.libconfig.overrideAttrs {
+        libconfig = prev.libconfig.overrideAttrs (old: {
           src = prev.fetchurl {
             url = "http://hyperrealm.github.io/libconfig/dist/libconfig-1.8.tar.gz";
             hash = "";
           };
-        };
+        });
       };
       pkgs = nixpkgs.legacyPackages.x86_64-linux.extend overlay;
     in
