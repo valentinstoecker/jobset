@@ -9,7 +9,7 @@
     in
     {
       packages.x86_64-linux = {
-        inherit (pkgs) hello cowsay;
+        inherit (pkgs) hello cowsay ffmpeg;
       };
 
       hydraJobs = {
