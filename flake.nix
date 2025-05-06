@@ -18,7 +18,7 @@
     in
     {
       packages.x86_64-linux = {
-        inherit (pkgs) hello cowsay ffmpeg libconfig;
+        inherit (pkgs) hello cowsay libconfig;
       };
 
       hydraJobs = {
