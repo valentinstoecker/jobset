@@ -25,6 +25,7 @@
           cowsay
           libconfig
           readline
+          clang
           ;
       };
 
