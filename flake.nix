@@ -24,6 +24,7 @@
           libconfig
           readline
           clang
+          go
           ;
       };
 
